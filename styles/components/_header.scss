@@ -1,4 +1,5 @@
 @use '../utils/variaveis' as *;
+@use '../utils/mixins' as *;
 
 header {
     background: $bg-color;
@@ -31,9 +32,8 @@ header {
         justify-self: center;
 
         a {
-            color: $cor-secundaria;
+            @include aply-font($fonte-principal, 1.2rem, 400, $cor-secundaria);
             text-decoration: none;
-            font-size: 1.2rem;
             margin: 0 1rem;
             transition: all 0.3s ease-in-out;
 

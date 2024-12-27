@@ -1,4 +1,5 @@
 @use '../utils/variaveis' as *;
+@use '../utils/mixins' as *;
 
 #about {
     margin: 0 auto;
@@ -19,17 +20,14 @@
     width: 100%;
     
     h2 {
-        font-family: $fonte-principal;
+        @include aply-font($fonte-principal, 2.5rem, 700, $cor-secundaria);
         margin: 0;
         grid-area: nome;
-        font-size: 2rem;
-        color: $cor-secundaria;
     }
     h3 {
-        font-family: $fonte-principal;
+        @include aply-font($fonte-principal, 1.5rem, 900, $cor-terciaria);
         grid-area: function;
         padding-left: 2rem;
-        color: $cor-terciaria;
         text-align: center;
 
         &:hover {
@@ -41,11 +39,16 @@
         }
     }
     p {
-        font-family: $fonte-principal;
+        @include aply-font($fonte-principal, 1rem, 400, $cor-secundaria);
         grid-area: description;
-        color: $cor-secundaria;
         max-width: 100%;
     }
+
+    text {
+        @extend h2;
+        font-size: 1rem;
+    }
+
     svg {
         padding: 2rem;
         grid-area: cv;

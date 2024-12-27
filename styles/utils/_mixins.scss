@@ -1,0 +1,6 @@
+@mixin aply-font($family, $size, $weight: 400, $color) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
