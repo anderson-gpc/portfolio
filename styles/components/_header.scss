@@ -2,10 +2,15 @@
 @use '../utils/mixins' as *;
 
 header {
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
     align-items: center;
+    background-color: $bg-color;
 
     img {
         padding: 0.5rem;
@@ -58,12 +63,14 @@ header {
 
         ul {
             position: absolute;
-            top: 5%;
+            top: 70%;
+            background-color: $bg-color;
             width: auto;
             list-style: none;
             display: none;
+            padding: 0;
             flex-direction: column;
-            right: 8%;
+            right: 5%;
 
             a {
                 display: flex;

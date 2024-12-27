@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: center;
     column-gap: 2rem;
-    max-width: 40rem;
+    max-width: 80rem;
     width: 100%;
     
     h2 {
@@ -52,6 +52,8 @@
     svg {
         padding: 2rem;
         grid-area: cv;
+        width: 10rem;
+        height: auto;
         justify-self: center;
     }
 

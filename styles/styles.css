@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -8,10 +12,15 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
   align-items: center;
+  background-color: #2B2C33;
 }
 header img {
   padding: 0.5rem;
@@ -58,12 +67,14 @@ header nav input:checked ~ ul {
 }
 header nav ul {
   position: absolute;
-  top: 5%;
+  top: 70%;
+  background-color: #2B2C33;
   width: auto;
   list-style: none;
   display: none;
+  padding: 0;
   flex-direction: column;
-  right: 8%;
+  right: 5%;
 }
 header nav ul a, header nav ul span {
   display: flex;
@@ -86,7 +97,7 @@ header nav ul img:hover {
   justify-content: center;
   -moz-column-gap: 2rem;
        column-gap: 2rem;
-  max-width: 40rem;
+  max-width: 80rem;
   width: 100%;
 }
 #about h2, #about text {
@@ -125,6 +136,8 @@ header nav ul img:hover {
 #about svg {
   padding: 2rem;
   grid-area: cv;
+  width: 10rem;
+  height: auto;
   justify-self: center;
 }
 #about img {
