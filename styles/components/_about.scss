@@ -11,11 +11,11 @@
         "function function img"
         "description description img"
         "cv cv cv";
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto auto;
     grid-template-rows: 2fr auto auto auto;
     align-items: center;
     justify-content: center;
-    column-gap: 4rem;
+    column-gap: 2rem;
     max-width: 40rem;
     width: 100%;
     
@@ -59,6 +59,6 @@
         grid-area: img;
         max-width: 20rem;
         width: auto;
-        height: 50%;
+        height: auto;
     }
 }
