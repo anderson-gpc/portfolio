@@ -1,0 +1,46 @@
+@use '../utils/variaveis' as *;
+
+header {
+    background: $bg-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    align-items: center;
+
+    img {
+        padding: 0.5rem;
+
+        &:hover {
+            animation: swing 2s infinite alternate;
+        }
+
+        @keyframes swing {
+            0% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+            50% {
+                transform: perspective(1000px) rotateY(180deg);
+            }
+            100% {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+        }
+    }
+
+    nav {
+        justify-self: center;
+
+        a {
+            color: $cor-secundaria;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 1rem;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(5em);
+                color: $cor-secundaria-hover;
+            }
+        }
+    }
+}
