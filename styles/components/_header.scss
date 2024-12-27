@@ -28,7 +28,8 @@ header {
     }
 
     nav {
-        justify-self: center;
+        display: flex;
+        align-items: center;
 
         a {
             @include aply-font($fonte-principal, 1.2rem, 400, $cor-secundaria);
@@ -41,5 +42,39 @@ header {
                 color: $cor-terciaria;
             }
         }
+
+        span {
+            @extend a;
+            cursor: pointer;
+        }
+
+        input {
+            display: none;
+
+            &:checked ~ ul {
+                display: flex;
+            }
+        }
+
+        ul {
+            position: absolute;
+            top: 5%;
+            width: auto;
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            right: 8%;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 1rem;             
+            }
+
+            img:hover {
+                animation: none;
+            }
+        }
     }
+    
 }

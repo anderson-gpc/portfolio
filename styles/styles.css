@@ -31,9 +31,10 @@ header img:hover {
   }
 }
 header nav {
-  justify-self: center;
+  display: flex;
+  align-items: center;
 }
-header nav a {
+header nav a, header nav span {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
@@ -42,9 +43,35 @@ header nav a {
   margin: 0 1rem;
   transition: all 0.3s ease-in-out;
 }
-header nav a:hover {
+header nav a:hover, header nav span:hover {
   transform: scale(5em);
   color: #a5b2fa;
+}
+header nav span {
+  cursor: pointer;
+}
+header nav input {
+  display: none;
+}
+header nav input:checked ~ ul {
+  display: flex;
+}
+header nav ul {
+  position: absolute;
+  top: 5%;
+  width: auto;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  right: 8%;
+}
+header nav ul a, header nav ul span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header nav ul img:hover {
+  animation: none;
 }
 
 #about {
