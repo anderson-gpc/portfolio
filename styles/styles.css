@@ -43,4 +43,55 @@ header nav a {
 header nav a:hover {
   transform: scale(5em);
   color: #838694;
+}
+
+#about {
+  margin: 0 auto;
+  background: black;
+  padding: 10rem;
+  display: grid;
+  grid-template-areas: "nome nome img" "function function img" "description description img" "cv cv cv";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 2fr auto auto auto;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+  max-width: 40rem;
+  width: 100%;
+}
+#about h2 {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  grid-area: nome;
+  font-size: 2rem;
+  color: #b9bbc5;
+}
+#about h3 {
+  font-family: "Poppins", sans-serif;
+  grid-area: function;
+  padding-left: 2rem;
+  color: #a5b2fa;
+  text-align: center;
+}
+#about h3:hover {
+  cursor: default;
+  transform: scale(1.05);
+  text-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 0 0 30px rgba(0, 0, 255, 0.6), 0 0 45px rgba(0, 0, 255, 0.4);
+}
+#about p {
+  font-family: "Poppins", sans-serif;
+  grid-area: description;
+  color: #b9bbc5;
+  max-width: 100%;
+}
+#about svg {
+  padding: 2rem;
+  grid-area: cv;
+  justify-self: center;
+}
+#about img {
+  grid-area: img;
+  width: 100%;
+  height: 50%;
 }/*# sourceMappingURL=styles.css.map */

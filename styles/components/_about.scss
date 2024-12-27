@@ -1,0 +1,60 @@
+@use '../utils/variaveis' as *;
+
+#about {
+    margin: 0 auto;
+    background: black;
+    padding: 10rem;
+    display: grid;
+    grid-template-areas: 
+        "nome nome img"
+        "function function img"
+        "description description img"
+        "cv cv cv";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 2fr auto auto auto;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4rem;
+    max-width: 40rem;
+    width: 100%;
+    
+    h2 {
+        font-family: $fonte-principal;
+        margin: 0;
+        grid-area: nome;
+        font-size: 2rem;
+        color: $cor-secundaria;
+    }
+    h3 {
+        font-family: $fonte-principal;
+        grid-area: function;
+        padding-left: 2rem;
+        color: $cor-terciaria;
+        text-align: center;
+
+        &:hover {
+            cursor: default;
+            transform: scale(1.05);
+            text-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 
+                        0 0 30px rgba(0, 0, 255, 0.6), 
+                        0 0 45px rgba(0, 0, 255, 0.4);
+        }
+    }
+    p {
+        font-family: $fonte-principal;
+        grid-area: description;
+        color: $cor-secundaria;
+        max-width: 100%;
+    }
+    svg {
+        padding: 2rem;
+        grid-area: cv;
+        justify-self: center;
+    }
+
+    img {
+        grid-area: img;
+        width: 100%;
+        height: 50%;
+    }
+}
