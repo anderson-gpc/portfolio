@@ -175,16 +175,32 @@ header nav a:hover {
 }
 #projects .container .bottons a {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 400;
   color: #353950;
-  cursor: pointer;
-  background-color: #b9bbc5;
+  place-self: center;
+  position: relative;
+  border: 0;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  background-color: #b9bbc5;
+}
+#projects .container .bottons a::after {
+  position: absolute;
+  inset: 0;
+  border: solid 2px transparent;
+  border-radius: inherit;
+  translate: 0.625em calc((1 - 2 * var(--hov, 0)) * 0.625em);
+  background: inherit;
+  background-position: 100%;
+  -webkit-mask: linear-gradient(red 0 0) padding-box, linear-gradient(red 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(red 0 0) padding-box exclude, linear-gradient(red 0 0);
+  transition: translate 0.3s;
+  pointer-events: none;
+  content: "";
 }
 #projects .container .bottons a:hover {
-  background-color: #838694;
-  color: #353950;
+  --hov: 1;
 }/*# sourceMappingURL=styles.css.map */

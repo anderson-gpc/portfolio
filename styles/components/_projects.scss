@@ -61,17 +61,35 @@
             justify-content: space-around;
             
             a {
-                @include aply-font($fonte-principal, 1rem, 400, $cor-primaria);
-                cursor: pointer;
-                background-color: $cor-secundaria;
-                padding: 0.5rem 1rem;
+                @include aply-font($fonte-principal, .85rem, 400, $cor-primaria);
+                place-self: center;
+                position: relative;
+                border: 0;
+                padding: .5rem 1rem;
                 text-decoration: none;
-                transition: all 0.3s ease-in-out;
-                
-                &:hover {
-                    background-color: $cor-secundaria-hover;
-                    color: $cor-primaria;
+                text-transform: uppercase;
+                background-color: $cor-secundaria;
+
+                &::after {
+                    position: absolute;
+                    inset: 0;
+                    border: solid 2px transparent;
+                    border-radius: inherit;
+                    translate: 
+                        .625em calc((1 - 2*var(--hov, 0))*#{.625em});
+                    background: inherit;
+                        background-position: 100%;
+                    mask: 
+                      linear-gradient(red 0 0) 
+                                padding-box exclude, 
+                      linear-gradient(red 0 0);
+                        
+                    transition: translate .3s;
+                        pointer-events: none;
+                    content: ''
                 }
+                &:hover {
+                    --hov: 1;}  
             }
         }
     }
