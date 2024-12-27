@@ -2,7 +2,6 @@
 @use '../utils/mixins' as *;
 
 header {
-    background: $bg-color;
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
@@ -39,7 +38,7 @@ header {
 
             &:hover {
                 transform: scale(5em);
-                color: $cor-secundaria-hover;
+                color: $cor-terciaria;
             }
         }
     }
