@@ -64,3 +64,20 @@
         height: auto;
     }
 }
+
+@media screen and (max-width: 768px) {
+    #home {
+        padding: 2rem;
+        grid-template-areas: 
+            "img img"
+            "nome nome"
+            "function function"
+            "description description"
+            "cv cv";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto;
+        justify-content: center;
+        column-gap: 0;
+    }
+    
+}
