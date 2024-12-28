@@ -156,21 +156,33 @@ header nav ul img:hover {
   grid-area: description;
   max-width: 100%;
 }
-#home a {
+#home .btn__cv {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 700;
   color: #b9bbc5;
-  text-decoration: none;
-  grid-area: cv;
-  width: 10rem;
-  height: auto;
-  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
 }
-#home a:hover {
+#home .btn__cv img {
+  display: none;
+}
+#home .btn__cv:hover {
+  justify-content: space-between;
+  gap: 1rem;
   cursor: pointer;
   transform: scale(1.05);
-  text-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 0 0 30px rgba(0, 0, 255, 0.6), 0 0 45px rgba(0, 0, 255, 0.4);
+  text-transform: uppercase;
+  background-color: #2B2C33;
+}
+#home .btn__cv:hover img {
+  display: block;
 }
 #home img {
   grid-area: img;
@@ -201,15 +213,17 @@ header nav ul img:hover {
     font-size: 1rem;
   }
   #home .btn__cv {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 40%;
+    width: 100%;
     margin: auto;
+    gap: 2rem;
+    justify-content: space-evenly;
     background-color: #2B2C33;
     text-align: center;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
+  }
+  #home .btn__cv img {
+    display: block;
   }
   #home .icon {
     width: 2rem;

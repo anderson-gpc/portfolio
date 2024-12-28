@@ -44,20 +44,32 @@
         max-width: 100%;
     }
 
-    a {
-        @include aply-font($fonte-principal, 1rem, 400, $cor-secundaria);
-        text-decoration: none;
-        grid-area: cv;
-        width: 10rem;
-        height: auto;
-        justify-self: center;
+    .btn__cv {
+        @include aply-font($fonte-principal, 1rem, 700, $cor-secundaria);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;      
+        
+        img {
+            display: none;
+        }
 
         &:hover {
+            justify-content: space-between;
+            gap: 1rem;
             cursor: pointer;
             transform: scale(1.05);
-            text-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 
-                        0 0 30px rgba(0, 0, 255, 0.6), 
-                        0 0 45px rgba(0, 0, 255, 0.4);
+            text-transform: uppercase;
+            background-color: $bg-color;
+
+            img {
+                display: block;
+            }
         }
     }
 
@@ -99,15 +111,18 @@
         }
 
         .btn__cv {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            width: 40%;
+            width: 100%;
             margin: auto;
+            gap: 2rem;
+            justify-content: space-evenly;
             background-color: $bg-color;
             text-align: center;
             padding: 0.5rem 1rem;
-            border-radius: 1rem;       
+            border-radius: 1rem;    
+            
+            img {
+                display: block;
+            }
         }
 
         .icon {
