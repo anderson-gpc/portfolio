@@ -1,0 +1,16 @@
+@use '../utils/variaveis' as *;
+@use '../utils/mixins' as *;
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.1rem;
+
+    a {
+        @include aply-font($fonte-principal, .2rem, 200, $cor-secundaria);
+        text-decoration: none;
+        color: $cor-terciaria;
+    }
+    
+}

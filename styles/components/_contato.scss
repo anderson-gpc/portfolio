@@ -1,0 +1,28 @@
+@use '../utils/variaveis' as *;
+@use '../utils/mixins' as *;
+
+.email {
+    margin: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        @include aply-font($fonte-principal, 1.5rem, 700, $cor-secundaria);
+        color: $cor-secundaria;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+        color: $cor-terciaria;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            text-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 
+                        0 0 30px rgba(0, 0, 255, 0.6), 
+                        0 0 45px rgba(0, 0, 255, 0.4);        }
+    }
+}

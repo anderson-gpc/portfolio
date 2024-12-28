@@ -12,3 +12,12 @@ body {
     text-decoration: none;
     background: $bg-gradiente;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, p {
+    cursor: default;
+
+}

@@ -2,7 +2,7 @@
 @use '../utils/mixins' as *;
 
 #home {
-    margin: 6rem auto;
+    margin: 2rem auto;
     background: transparent;
     padding: 10rem;
     display: grid;
@@ -73,12 +73,10 @@
             cursor: pointer;
             transform: scale(1.05);
             text-transform: uppercase;
-            background-color: $cor-terciaria;
-            color: $cor-primaria;
-
-            img {
-                display: block;
-            }
+            color: $cor-terciaria;
+            text-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 
+            0 0 30px rgba(0, 0, 255, 0.6), 
+            0 0 45px rgba(0, 0, 255, 0.4);
         }
     }
 
@@ -131,6 +129,11 @@
             
             img {
                 display: block;
+            }
+
+            &:hover {
+                text-shadow: none;
+                text-transform: none;
             }
         }
 
