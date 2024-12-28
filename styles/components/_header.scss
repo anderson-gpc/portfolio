@@ -71,6 +71,7 @@ header {
             padding: 0;
             flex-direction: column;
             right: 5%;
+            border-radius: 0 0 1rem 1rem;
 
             a {
                 display: flex;
@@ -80,6 +81,37 @@ header {
 
             img:hover {
                 animation: none;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+
+        nav {
+            a {
+                font-size: 1rem;
+            }
+            label {
+                display: flex;
+
+            }
+            ul {
+                position: absolute;
+                top: 80%;
+                background-color: $bg-color;
+                width: auto;
+                list-style: none;
+                display: none;
+                padding: 0;
+                flex-direction: column;
+                right: 5%;
+                border-radius: 0 0 1rem 1rem;
             }
         }
     }

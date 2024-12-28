@@ -44,18 +44,23 @@
         max-width: 100%;
     }
 
-    text {
-        @extend h2;
-        font-size: 1rem;
-    }
-
-    svg {
-        padding: 2rem;
+    a {
+        @include aply-font($fonte-principal, 1rem, 400, $cor-secundaria);
+        text-decoration: none;
         grid-area: cv;
         width: 10rem;
         height: auto;
         justify-self: center;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            text-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 
+                        0 0 30px rgba(0, 0, 255, 0.6), 
+                        0 0 45px rgba(0, 0, 255, 0.4);
+        }
     }
+
 
     img {
         grid-area: img;
@@ -78,6 +83,29 @@
         grid-template-rows: auto auto auto auto auto;
         justify-content: center;
         column-gap: 0;
+
+        img {
+            width: 60%;
+            height: auto;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        a {
+            margin: auto;
+            background-color: $bg-color;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 1rem;
+        }
+
     }
     
 }
