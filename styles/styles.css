@@ -85,7 +85,7 @@ header nav ul img:hover {
   animation: none;
 }
 
-#about {
+#home {
   margin: 0 auto;
   background: transparent;
   padding: 10rem;
@@ -100,7 +100,7 @@ header nav ul img:hover {
   max-width: 80rem;
   width: 100%;
 }
-#about h2, #about text {
+#home h2, #home text {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
@@ -108,7 +108,7 @@ header nav ul img:hover {
   margin: 0;
   grid-area: nome;
 }
-#about h3 {
+#home h3 {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 900;
@@ -117,12 +117,12 @@ header nav ul img:hover {
   padding-left: 2rem;
   text-align: center;
 }
-#about h3:hover {
+#home h3:hover {
   cursor: default;
   transform: scale(1.05);
   text-shadow: 0 0 15px rgba(0, 0, 255, 0.8), 0 0 30px rgba(0, 0, 255, 0.6), 0 0 45px rgba(0, 0, 255, 0.4);
 }
-#about p {
+#home p {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -130,17 +130,17 @@ header nav ul img:hover {
   grid-area: description;
   max-width: 100%;
 }
-#about text {
+#home text {
   font-size: 1rem;
 }
-#about svg {
+#home svg {
   padding: 2rem;
   grid-area: cv;
   width: 10rem;
   height: auto;
   justify-self: center;
 }
-#about img {
+#home img {
   grid-area: img;
   max-width: 20rem;
   width: auto;
