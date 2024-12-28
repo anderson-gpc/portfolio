@@ -3,15 +3,15 @@
 
 #projects {
     display: flex;
+    padding: 5rem .5rem;
     flex-direction: column;
     max-width: 50vh;
     align-items: center;
     justify-content: center;
-    margin: 5rem 2rem;
+    margin: 5rem 6rem;
 
     h2 {
         @include aply-font($fonte-principal, 2.5rem, 700, $cor-secundaria);
-        margin-bottom: 5rem;
         text-align: center;
     }
 
@@ -63,33 +63,17 @@
             a {
                 @include aply-font($fonte-principal, .85rem, 400, $cor-primaria);
                 place-self: center;
-                position: relative;
                 border: 0;
                 padding: .5rem 1rem;
                 text-decoration: none;
                 text-transform: uppercase;
                 background-color: $cor-secundaria;
-
-                &::after {
-                    position: absolute;
-                    inset: 0;
-                    border: solid 2px transparent;
-                    border-radius: inherit;
-                    translate: 
-                        .625em calc((1 - 2*var(--hov, 0))*#{.625em});
-                    background: inherit;
-                        background-position: 100%;
-                    mask: 
-                      linear-gradient(red 0 0) 
-                                padding-box exclude, 
-                      linear-gradient(red 0 0);
-                        
-                    transition: translate .3s;
-                        pointer-events: none;
-                    content: ''
-                }
+                border-radius: 1rem;
+                
                 &:hover {
-                    --hov: 1;}  
+                    background-color: $cor-terciaria;
+                    transform: scale(1.05);
+                }
             }
         }
     }
