@@ -249,12 +249,9 @@ header nav ul img:hover {
 }
 #projects {
   display: flex;
-  padding: 5rem 0.5rem;
   flex-direction: column;
-  max-width: 50vh;
   align-items: center;
   justify-content: center;
-  margin: 5rem 6rem;
 }
 #projects h2 {
   font-family: "Poppins", sans-serif;
@@ -270,6 +267,7 @@ header nav ul img:hover {
   margin: 1rem;
   height: auto;
   width: auto;
+  max-width: 25rem;
   box-shadow: 10px 16px 15px 2px #353950;
 }
 #projects .container img {
@@ -332,6 +330,11 @@ header nav ul img:hover {
   transform: scale(1.05);
 }
 
+@media screen and (max-width: 768px) {
+  #projects {
+    width: 100%;
+  }
+}
 .about {
   display: flex;
   align-items: flex-start;

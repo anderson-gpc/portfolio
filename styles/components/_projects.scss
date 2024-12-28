@@ -3,12 +3,9 @@
 
 #projects {
     display: flex;
-    padding: 5rem .5rem;
     flex-direction: column;
-    max-width: 50vh;
     align-items: center;
     justify-content: center;
-    margin: 5rem 6rem;
 
     h2 {
         @include aply-font($fonte-principal, 2.5rem, 700, $cor-secundaria);
@@ -23,6 +20,7 @@
         margin: 1rem;
         height: auto;
         width: auto;
+        max-width: 25rem;
         box-shadow: 10px 16px 15px 2px $cor-primaria;
 
 
@@ -76,5 +74,11 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #projects {
+        width: 100%;
     }
 }
