@@ -200,12 +200,20 @@ header nav ul img:hover {
   #home h3 {
     font-size: 1rem;
   }
-  #home a {
+  #home .btn__cv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
     margin: auto;
     background-color: #2B2C33;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 1rem;
+  }
+  #home .icon {
+    width: 2rem;
+    height: 2rem;
   }
 }
 #projects {
