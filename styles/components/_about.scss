@@ -1,2 +1,38 @@
 @use '../utils/variaveis' as *;
 @use '../utils/mixins' as *;
+
+.about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 2rem;
+
+    .about__habilidades {
+        max-width: 50vh;
+    }
+
+    h2 {
+        @include aply-font($fonte-principal, 1.5rem, 700, $cor-secundaria);
+        color: $cor-secundaria;
+    }
+
+    h3 {
+        @include aply-font($fonte-principal, 1rem, 200, $cor-secundaria);
+        color: $cor-secundaria;
+    }
+
+    span {
+        @include aply-font($fonte-principal, 1rem, 800, $cor-terciaria);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        padding: 2rem;
+
+        .about__habilidades {
+            max-width: 100%;
+        }
+    }
+}
