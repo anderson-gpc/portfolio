@@ -99,6 +99,7 @@ header nav ul img:hover {
     flex-direction: column;
     padding: 0;
     gap: 0;
+    padding-bottom: 1rem;
   }
   header nav a, header nav span {
     font-size: 1rem;
