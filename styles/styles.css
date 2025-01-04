@@ -51,7 +51,7 @@ header nav {
   display: flex;
   align-items: center;
 }
-header nav a, header nav span {
+header nav a, header nav span, header nav button {
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
@@ -60,9 +60,14 @@ header nav a, header nav span {
   margin: 0 1rem;
   transition: all 0.3s ease-in-out;
 }
-header nav a:hover, header nav span:hover {
+header nav a:hover, header nav span:hover, header nav button:hover {
   transform: scale(5em);
   color: #a5b2fa;
+}
+header nav button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 header nav span {
   cursor: pointer;
@@ -77,15 +82,15 @@ header nav ul {
   position: absolute;
   top: 70%;
   background-color: #2B2C33;
+  display: none;
   width: auto;
   list-style: none;
-  display: none;
   padding: 0;
   flex-direction: column;
   right: 5%;
   border-radius: 0 0 1rem 1rem;
 }
-header nav ul a, header nav ul span {
+header nav ul a, header nav ul button, header nav ul span {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -101,7 +106,7 @@ header nav ul img:hover {
     gap: 0;
     padding-bottom: 1rem;
   }
-  header nav a, header nav span {
+  header nav a, header nav button, header nav span {
     font-size: 1rem;
   }
   header nav label {
