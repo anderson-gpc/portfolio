@@ -31,6 +31,7 @@
         @include aply-font($fonte-principal, 2.5rem, 700, $cor-secundaria);
         margin: 0;
         grid-area: nome;
+        padding: 10px;
     }
     h3 {
         @include aply-font($fonte-principal, 1.5rem, 900, $cor-terciaria);

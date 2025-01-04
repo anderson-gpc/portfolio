@@ -154,6 +154,7 @@ header nav ul img:hover {
   color: #b9bbc5;
   margin: 0;
   grid-area: nome;
+  padding: 10px;
 }
 #home h3 {
   font-family: "Poppins", sans-serif;
@@ -319,21 +320,65 @@ header nav ul img:hover {
   justify-content: space-around;
 }
 #projects .container .bottons a {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: #353950;
-  place-self: center;
-  border: 0;
-  padding: 0.5rem 1rem;
   text-decoration: none;
-  text-transform: uppercase;
-  background-color: #b9bbc5;
-  border-radius: 1rem;
 }
-#projects .container .bottons a:hover {
-  background-color: #a5b2fa;
-  transform: scale(1.05);
+#projects .container .bottons .view__projeto {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #b9bbc5;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+#projects .container .bottons .view__projeto .icon {
+  width: 1rem;
+  height: auto;
+  fill: #b9bbc5;
+}
+#projects .container .bottons .view__projeto:hover {
+  color: #a5b2fa;
+}
+#projects .container .bottons .view__projeto:hover .icon {
+  fill: #a5b2fa;
+}
+#projects .container .bottons .view_github {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #b9bbc5;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  padding: 0 0.5rem;
+}
+#projects .container .bottons .view_github::before {
+  content: "";
+  height: 100%;
+  width: 0;
+  border-radius: 30em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #353950, #b9bbc5);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+#projects .container .bottons .view_github:hover::before {
+  width: 100%;
+}
+#projects .container .bottons .view_github:hover {
+  color: #a5b2fa;
 }
 
 @media screen and (max-width: 768px) {

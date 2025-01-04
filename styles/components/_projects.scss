@@ -57,22 +57,76 @@
         .bottons {
             display: flex;
             justify-content: space-around;
-            
+
             a {
-                @include aply-font($fonte-principal, .85rem, 400, $cor-primaria);
-                place-self: center;
-                border: 0;
-                padding: .5rem 1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-                background-color: $cor-secundaria;
-                border-radius: 1rem;
-                
+                text-decoration: none
+            }
+            
+            .view__projeto {
+                @include aply-font($fonte-principal, 0.9rem, 700, $cor-secundaria);
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+            
+                .icon {
+                    width: 1rem;
+                    height: auto;
+                    fill: $cor-secundaria;
+                }
+            
                 &:hover {
-                    background-color: $cor-terciaria;
-                    transform: scale(1.05);
+                    color: $cor-terciaria;
+            
+                    .icon {
+                        fill: $cor-terciaria;
+                    }
                 }
             }
+            
+
+            .view_github {
+                @include aply-font($fonte-principal, 1rem, 700, $cor-secundaria);
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+                border: none;
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+                z-index: 1;
+                padding: 0 .5rem;
+
+                &::before {
+                    content: '';
+                    height: 100%;
+                    width: 0;
+                    border-radius: 30em;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-image: linear-gradient(
+                        to right,
+                        $cor-primaria,
+                        $cor-secundaria
+                    );
+                    transition: .5s ease;
+                    display: block;
+                    z-index: -1;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                }
+
+                &:hover {
+                    color: $cor-terciaria;
+                }
+            }
+            
         }
     }
 }
