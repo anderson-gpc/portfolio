@@ -30,105 +30,37 @@ const ListaItem = styled(motion.li)`
   cursor: pointer;
 `;
 
+const linguagens = [
+  { img: python, name: "Python" },
+  { img: js, name: "JavaScript" },
+  { img: reac, name: "React" },
+  { img: node, name: "Node" },
+  { img: git, name: "Git" },
+  { img: arduino, name: "Arduino" },
+];
+
 function Lista() {
   return (
     <ListaContainer>
-      <ListaItem
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        whileHover={{ scale: 1.1 }}
-      >
-        Python{" "}
-        <Image
-          $alturaMobileMenor="1rem"
-          $alturaMobile="2rem"
-          $laguraMobile="2rem"
-          $altura="2rem"
-          $lagura="2rem"
-          src={python}
-        />
-      </ListaItem>
-      <ListaItem
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        whileHover={{ scale: 1.1 }}
-      >
-        JavaScript{" "}
-        <Image
-          $alturaMobileMenor="1rem"
-          $alturaMobile="2rem"
-          $laguraMobile="2rem"
-          $altura="2rem"
-          $lagura="2rem"
-          src={js}
-        />
-      </ListaItem>
-      <ListaItem
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        whileHover={{ scale: 1.1 }}
-      >
-        React{" "}
-        <Image
-          $alturaMobileMenor="1rem"
-          $alturaMobile="2rem"
-          $laguraMobile="2rem"
-          $altura="2rem"
-          $lagura="2rem"
-          src={reac}
-        />
-      </ListaItem>
-      <ListaItem
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        whileHover={{ scale: 1.1 }}
-      >
-        Node.js{" "}
-        <Image
-          $alturaMobileMenor="1rem"
-          $alturaMobile="2rem"
-          $laguraMobile="2rem"
-          $altura="2rem"
-          $lagura="2rem"
-          src={node}
-        />
-      </ListaItem>
-      <ListaItem
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        whileHover={{ scale: 1.1 }}
-      >
-        Git{" "}
-        <Image
-          $alturaMobileMenor="1rem"
-          $alturaMobile="2rem"
-          $laguraMobile="2rem"
-          $altura="2rem"
-          $lagura="2rem"
-          src={git}
-        />
-      </ListaItem>
-      <ListaItem
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        whileHover={{ scale: 1.1 }}
-      >
-        Arduino{" "}
-        <Image
-          $alturaMobileMenor="1rem"
-          $alturaMobile="2rem"
-          $laguraMobile="2rem"
-          $altura="2rem"
-          $lagura="2rem"
-          src={arduino}
-        />
-      </ListaItem>
+      {linguagens.map((linguagem) => (
+        <ListaItem
+          key={linguagem.name}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          whileHover={{ scale: 1.1 }}
+        >
+          {linguagem.name}{" "}
+          <Image
+            $alturaMobileMenor="1rem"
+            $alturaMobile="2rem"
+            $laguraMobile="2rem"
+            $altura="2rem"
+            $lagura="2rem"
+            src={linguagem.img}
+          />
+        </ListaItem>
+      ))}
     </ListaContainer>
   );
 }
