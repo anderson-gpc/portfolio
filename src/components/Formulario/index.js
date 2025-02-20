@@ -10,6 +10,7 @@ const FormContainer = styled.form`
   justify-content: space-between;
   gap: 1rem;
   width: 50%;
+  padding: 2rem;
 `;
 
 const Input = styled(motion.input)`

@@ -1,18 +1,25 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+import logo from "../../assets/icons/logo.png";
+import { Image } from "../Image";
 import { Button } from "../Button";
 import { Apresentacao } from "../Apresentacao";
 import Formulario from "../Formulario";
 
 const ContatoContainer = styled(motion.section)`
-  height: 50vh;
+  height: auto;
   background-color: #02c1e3;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+`;
+
+const Division = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 function Contato({ headerRef }) {
@@ -27,7 +34,10 @@ function Contato({ headerRef }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <Apresentacao $fontColor="white">Entre em contato</Apresentacao>
+      <Division>
+        <Apresentacao $fontColor="white">Entre em contato</Apresentacao>
+        <Image src={logo} $altura="12rem" $largura="12rem" />
+      </Division>
       <Formulario />
       <Button
         onClick={scrollToHeader}
