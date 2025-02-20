@@ -38,7 +38,14 @@ function Lista() {
         transition={{ duration: 1 }}
         whileHover={{ scale: 1.1 }}
       >
-        Python <Image $altura="2rem" $lagura="2rem" src={python} />
+        Python{" "}
+        <Image
+          $alturaMobile="2rem"
+          $laguraMobile="2rem"
+          $altura="2rem"
+          $lagura="2rem"
+          src={python}
+        />
       </ListaItem>
       <ListaItem
         initial={{ opacity: 0 }}
@@ -46,7 +53,14 @@ function Lista() {
         transition={{ duration: 1 }}
         whileHover={{ scale: 1.1 }}
       >
-        JavaScript <Image $altura="2rem" $lagura="2rem" src={js} />
+        JavaScript{" "}
+        <Image
+          $alturaMobile="2rem"
+          $laguraMobile="2rem"
+          $altura="2rem"
+          $lagura="2rem"
+          src={js}
+        />
       </ListaItem>
       <ListaItem
         initial={{ opacity: 0 }}
@@ -54,7 +68,14 @@ function Lista() {
         transition={{ duration: 1 }}
         whileHover={{ scale: 1.1 }}
       >
-        React <Image $altura="2rem" $lagura="2rem" src={reac} />
+        React{" "}
+        <Image
+          $alturaMobile="2rem"
+          $laguraMobile="2rem"
+          $altura="2rem"
+          $lagura="2rem"
+          src={reac}
+        />
       </ListaItem>
       <ListaItem
         initial={{ opacity: 0 }}
@@ -62,7 +83,14 @@ function Lista() {
         transition={{ duration: 1 }}
         whileHover={{ scale: 1.1 }}
       >
-        Node.js <Image $altura="2rem" $lagura="2rem" src={node} />
+        Node.js{" "}
+        <Image
+          $alturaMobile="2rem"
+          $laguraMobile="2rem"
+          $altura="2rem"
+          $lagura="2rem"
+          src={node}
+        />
       </ListaItem>
       <ListaItem
         initial={{ opacity: 0 }}
@@ -70,7 +98,14 @@ function Lista() {
         transition={{ duration: 1 }}
         whileHover={{ scale: 1.1 }}
       >
-        Git <Image $altura="2rem" $lagura="2rem" src={git} />
+        Git{" "}
+        <Image
+          $alturaMobile="2rem"
+          $laguraMobile="2rem"
+          $altura="2rem"
+          $lagura="2rem"
+          src={git}
+        />
       </ListaItem>
       <ListaItem
         initial={{ opacity: 0 }}
@@ -78,7 +113,14 @@ function Lista() {
         transition={{ duration: 1 }}
         whileHover={{ scale: 1.1 }}
       >
-        Arduino <Image $altura="2rem" $lagura="2rem" src={arduino} />
+        Arduino{" "}
+        <Image
+          $alturaMobile="2rem"
+          $laguraMobile="2rem"
+          $altura="2rem"
+          $lagura="2rem"
+          src={arduino}
+        />
       </ListaItem>
     </ListaContainer>
   );

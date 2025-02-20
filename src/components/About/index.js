@@ -99,6 +99,8 @@ function About({ aboutRef, projectRef }) {
         <Image
           $altura="20rem"
           $largura="auto"
+          $alturaMobile="15rem"
+          $larguraMobile="auto"
           src={perfil}
           alt="Foto de Anderson Gabriel"
         />

@@ -36,7 +36,13 @@ function Contato({ headerRef }) {
     >
       <Division>
         <Apresentacao $fontColor="white">Entre em contato</Apresentacao>
-        <Image src={logo} $altura="12rem" $largura="12rem" />
+        <Image
+          src={logo}
+          $altura="12rem"
+          $largura="12rem"
+          $alturaMobile="12rem"
+          $larguraMobile="12rem"
+        />
       </Division>
       <Formulario />
       <Button
