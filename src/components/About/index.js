@@ -90,6 +90,8 @@ function About({ aboutRef, projectRef }) {
             $bg_color_start="white"
             $bg_color_end="white"
             $hover_color="#02c1e3"
+            href="https://drive.google.com/uc?export=download&id=1QH55-scF4Vh3wIsl1iqqpM7uJS02kr4-
+"
           >
             <span>Resumo</span>
           </Button>
