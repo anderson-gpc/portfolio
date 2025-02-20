@@ -15,6 +15,11 @@ const AboutMain = styled(motion.div)`
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
+
+  @media (max-width: 720px) {
+    height: auto;
+    padding-bottom: 1rem;
+  }
 `;
 
 const AboutContainer = styled(motion.div)`
@@ -31,7 +36,18 @@ const AboutContainer = styled(motion.div)`
   border-right: 50px solid white;
   border-end-end-radius: 40%;
   border-bottom: 50px solid white;
-  transform: rotateX(10deg); /* Ajustando a rotação */
+  transform: rotateX(10deg);
+
+  @media (max-width: 720px) {
+    width: 100%;
+    flex-direction: column;
+    margin: 0 0.5rem;
+    padding: 1.5rem;
+    gap: 0.5rem;
+    border-right: none;
+    border-bottom: none;
+    border-end-end-radius: 0;
+  }
 `;
 
 const AboutDescription = styled.div`
@@ -41,6 +57,12 @@ const AboutDescription = styled.div`
   gap: 1rem;
   text-align: center;
   font-weight: 400;
+
+  @media (max-width: 720px) {
+    width: 50%;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const AboutLanguagens = styled.div`
@@ -48,6 +70,10 @@ const AboutLanguagens = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+
+  @media (max-width: 720px) {
+    gap: 1rem;
+  }
 `;
 
 function About({ aboutRef, projectRef }) {
@@ -59,7 +85,7 @@ function About({ aboutRef, projectRef }) {
 
   return (
     <AboutMain
-      ref={aboutRef} // Usando a ref passada pelo App
+      ref={aboutRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -90,8 +116,7 @@ function About({ aboutRef, projectRef }) {
             $bg_color_start="white"
             $bg_color_end="white"
             $hover_color="#02c1e3"
-            href="https://drive.google.com/uc?export=download&id=1QH55-scF4Vh3wIsl1iqqpM7uJS02kr4-
-"
+            href="https://drive.google.com/uc?export=download&id=1QH55-scF4Vh3wIsl1iqqpM7uJS02kr4-"
           >
             <span>Resumo</span>
           </Button>

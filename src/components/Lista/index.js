@@ -15,6 +15,10 @@ const ListaContainer = styled.ul`
   gap: 2rem;
   align-items: flex-start;
   padding-inline-start: 0;
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
 `;
 
 const ListaItem = styled(motion.li)`
