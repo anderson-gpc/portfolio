@@ -18,6 +18,7 @@ const ListaContainer = styled.ul`
 
   @media (max-width: 720px) {
     flex-direction: column;
+    gap: 1rem;
   }
 `;
 
@@ -40,6 +41,7 @@ function Lista() {
       >
         Python{" "}
         <Image
+          $alturaMobileMenor="1rem"
           $alturaMobile="2rem"
           $laguraMobile="2rem"
           $altura="2rem"
@@ -55,6 +57,7 @@ function Lista() {
       >
         JavaScript{" "}
         <Image
+          $alturaMobileMenor="1rem"
           $alturaMobile="2rem"
           $laguraMobile="2rem"
           $altura="2rem"
@@ -70,6 +73,7 @@ function Lista() {
       >
         React{" "}
         <Image
+          $alturaMobileMenor="1rem"
           $alturaMobile="2rem"
           $laguraMobile="2rem"
           $altura="2rem"
@@ -85,6 +89,7 @@ function Lista() {
       >
         Node.js{" "}
         <Image
+          $alturaMobileMenor="1rem"
           $alturaMobile="2rem"
           $laguraMobile="2rem"
           $altura="2rem"
@@ -100,6 +105,7 @@ function Lista() {
       >
         Git{" "}
         <Image
+          $alturaMobileMenor="1rem"
           $alturaMobile="2rem"
           $laguraMobile="2rem"
           $altura="2rem"
@@ -115,6 +121,7 @@ function Lista() {
       >
         Arduino{" "}
         <Image
+          $alturaMobileMenor="1rem"
           $alturaMobile="2rem"
           $laguraMobile="2rem"
           $altura="2rem"

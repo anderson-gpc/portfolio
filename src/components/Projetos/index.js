@@ -33,6 +33,12 @@ const ProjetosLista = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 1rem;
+
+  @media (max-width: 720px) {
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-inline-start: 0;
+  }
 `;
 
 const ProjetoItem = styled(motion.li)`
@@ -46,6 +52,16 @@ const ProjetoItem = styled(motion.li)`
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: filter 0.3s ease;
+
+  @media (max-width: 720px) {
+    border-radius: 1rem;
+    box-shadow: none;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Botoes = styled.div`
@@ -98,9 +114,20 @@ function Projetos({ projectRef }) {
             }}
             style={{ filter: visiveis[index] ? "none" : "blur(2px)" }}
           >
-            <Image src={projeto.imagem.frases} $altura="30rem" />
+            <Image
+              src={projeto.imagem.frases}
+              $altura="30rem"
+              $alturaMobile="20rem"
+              $alturaMobileMenor="10rem"
+            />
             <SubTitulo $fontColor="#025ce3">{projeto.name}</SubTitulo>
-            <Apresentacao $fontSize="1rem" $fontColor="black" $fontPeso="500">
+            <Apresentacao
+              $fontSize="1rem"
+              $fontSizeMobile="0.8rem"
+              $fontColor="black"
+              $fontPeso="500"
+              $maxWidthMobile="100%"
+            >
               {projeto.descricao || "Projeto sem descrição disponível."}
             </Apresentacao>
             <Botoes>

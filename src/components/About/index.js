@@ -100,13 +100,19 @@ function About({ aboutRef, projectRef }) {
           $altura="20rem"
           $largura="auto"
           $alturaMobile="15rem"
+          $alturaMobileMenor="10rem"
           $larguraMobile="auto"
           src={perfil}
           alt="Foto de Anderson Gabriel"
         />
         <AboutDescription>
           <SubTitulo>Sobre mim</SubTitulo>
-          <Apresentacao $fontSize="1rem" $fontColor="white" $fontPeso="400">
+          <Apresentacao
+            $fontSize="1rem"
+            $fontColor="white"
+            $fontPeso="400"
+            $fontSizeMobile="1rem"
+          >
             Me chamo Anderson Gabriel, sou desenvolvedor fullstack <br />
             Tenho 22 anos e faço Sistemas de Informações pela UFRN.
           </Apresentacao>

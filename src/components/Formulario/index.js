@@ -11,6 +11,10 @@ const FormContainer = styled.form`
   gap: 1rem;
   width: 50%;
   padding: 2rem;
+
+  @media (max-width: 720px) {
+    width: 90%;
+  }
 `;
 
 const Input = styled(motion.input)`

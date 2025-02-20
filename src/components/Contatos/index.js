@@ -20,6 +20,10 @@ const ContatoContainer = styled(motion.section)`
 const Division = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
 `;
 
 function Contato({ headerRef }) {
@@ -42,6 +46,8 @@ function Contato({ headerRef }) {
           $largura="12rem"
           $alturaMobile="12rem"
           $larguraMobile="12rem"
+          $alturaMobileMenor="10rem"
+          $larguraMobileMenor="10rem"
         />
       </Division>
       <Formulario />
