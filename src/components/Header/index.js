@@ -12,6 +12,11 @@ const HeaderContainer = styled(motion.div)`
   justify-content: center;
   align-items: flex-start;
   margin-left: 15rem;
+
+  @media (max-width: 720px) {
+    margin-left: 1rem;
+    align-items: center;
+  }
 `;
 
 const Header = ({ aboutRef, headerRef }) => {
