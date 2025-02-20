@@ -1,0 +1,50 @@
+import styled from "styled-components";
+import { motion } from "framer-motion";
+
+import { Button } from "../Button";
+import { Apresentacao } from "../Apresentacao";
+import Formulario from "../Formulario";
+
+const ContatoContainer = styled(motion.section)`
+  height: 50vh;
+  background-color: #02c1e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+`;
+
+function Contato({ headerRef }) {
+  const scrollToHeader = () => {
+    if (headerRef.current) {
+      headerRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  return (
+    <ContatoContainer
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
+      <Apresentacao $fontColor="white">Entre em contato</Apresentacao>
+      <Formulario />
+      <Button
+        onClick={scrollToHeader}
+        $border_color_start="transparent"
+        $border_color_end="transparent"
+        $text_color="white"
+        $bg_color_end="white"
+        $bg_color_start="white"
+        $hover_color="#02c1e3"
+        $border="0.1rem solid"
+        $form="none"
+        $size="0.9rem"
+      >
+        <span>Topo</span>
+      </Button>
+    </ContatoContainer>
+  );
+}
+
+export default Contato;
