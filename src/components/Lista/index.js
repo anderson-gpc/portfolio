@@ -3,16 +3,17 @@ import { motion } from "framer-motion";
 import { Image } from "../Image";
 
 import python from "../../assets/icons/python.png";
-import js from "../../assets/icons/js.png";
+import js from "../../assets/icons/javascript.png";
 import reac from "../../assets/icons/react.png";
-import node from "../../assets/icons/node-js.png";
+import node from "../../assets/icons/node.png";
 import git from "../../assets/icons/git.png";
 import arduino from "../../assets/icons/arduino.png";
+import ts from "../../assets/icons/typescript.png";
 
 const ListaContainer = styled.ul`
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 5rem;
   align-items: flex-start;
   padding-inline-start: 0;
 
@@ -24,6 +25,7 @@ const ListaContainer = styled.ul`
 
 const ListaItem = styled(motion.li)`
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   gap: 1rem;
   justify-content: center;
@@ -33,6 +35,7 @@ const ListaItem = styled(motion.li)`
 const linguagens = [
   { img: python, name: "Python" },
   { img: js, name: "JavaScript" },
+  { img: ts, name: "TypeScript" },
   { img: reac, name: "React" },
   { img: node, name: "Node" },
   { img: git, name: "Git" },
