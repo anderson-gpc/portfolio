@@ -104,6 +104,7 @@ function About({ aboutRef, projectRef }) {
           $larguraMobile="auto"
           src={perfil}
           alt="Foto de Anderson Gabriel"
+          $filter="none"
         />
         <AboutDescription>
           <SubTitulo>Sobre mim</SubTitulo>

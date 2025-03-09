@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import logo from "../../assets/icons/logo.png";
-import { Image } from "../Image";
 import { Button } from "../Button";
 import { Apresentacao } from "../Apresentacao";
 import Formulario from "../Formulario";
@@ -40,15 +38,6 @@ function Contato({ headerRef }) {
     >
       <Division>
         <Apresentacao $fontColor="white">Entre em contato</Apresentacao>
-        <Image
-          src={logo}
-          $altura="12rem"
-          $largura="12rem"
-          $alturaMobile="12rem"
-          $larguraMobile="12rem"
-          $alturaMobileMenor="10rem"
-          $larguraMobileMenor="10rem"
-        />
       </Division>
       <Formulario />
       <Button

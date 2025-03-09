@@ -42,6 +42,7 @@ const ProjetosLista = styled.ul`
 `;
 
 const ProjetoItem = styled(motion.li)`
+  cursor: pointer;
   position: relative;
   top: 40%;
   display: flex;
@@ -95,7 +96,7 @@ function Projetos({ projectRef }) {
     elementosRef.current.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
-  }, [projetos, visiveis]);
+  });
 
   return (
     <ProjetosContainer ref={projectRef}>
