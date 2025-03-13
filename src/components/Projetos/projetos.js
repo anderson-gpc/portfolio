@@ -2,7 +2,7 @@ import frases from "../../assets/images/advice.png";
 
 export const projetos = [
   {
-    name: "Frases",
+    name: "Advice Generator App",
     descricao:
       "Aplicação que gera conselhos para os usuários dinâmicamente a partir de uma API.",
     pages: "https://andersonstack.github.io/frases/",
