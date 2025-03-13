@@ -1,4 +1,4 @@
-import frases from "../../assets/images/frases.png";
+import frases from "../../assets/images/advice.png";
 
 export const projetos = [
   {
