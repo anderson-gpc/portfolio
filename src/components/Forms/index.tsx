@@ -47,11 +47,6 @@ const Forms = () => {
             className={styles.form__description}
             required
           />
-          <input
-            type="hidden"
-            name="to_email"
-            value="andersong.pereiracruz@gmail.com"
-          />
           <Button type="submit">
             <span>{enviado ? "Enviado!" : "Enviar"}</span>
           </Button>
