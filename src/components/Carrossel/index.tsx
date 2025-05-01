@@ -31,14 +31,6 @@ const projetos: Projetos[] = [
     repo: "https://github.com/andersonstack/advice-generator-app",
     img: frases,
   },
-  {
-    name: "Advice Generator App",
-    description:
-      "Aplicação que gera conselhos para os usuários dinâmicamente a partir de uma API.",
-    deploy: "https://andersonstack.github.io/advice-generator-app/",
-    repo: "https://github.com/andersonstack/advice-generator-app",
-    img: frases,
-  },
 ];
 
 const Carrossel = ({ ref }: { ref: React.RefObject<HTMLElement> }) => {
