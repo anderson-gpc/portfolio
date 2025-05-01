@@ -1,0 +1,42 @@
+.perfil {
+  position: relative;
+  top: 10rem;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  object-fit: cover;
+}
+
+.icons {
+  width: 2rem;
+  height: auto;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.projeto {
+  width: 70rem;
+  height: auto;
+  filter: grayscale(100%);
+  box-shadow: 1rem 1rem 0 0.05rem var(--azul-claro);
+  transition: all 1s ease;
+  cursor: pointer;
+
+  &:hover {
+    filter: grayscale(0);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .perfil {
+    top: 1rem;
+    width: 15rem;
+  }
+
+  .projeto {
+    width: 20rem;
+  }
+}
