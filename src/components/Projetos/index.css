@@ -1,6 +1,0 @@
-.forma {
-  background-color: #02c1e3;
-  height: 50vh;
-  z-index: -1;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-}

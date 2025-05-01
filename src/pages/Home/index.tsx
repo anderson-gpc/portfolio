@@ -12,7 +12,7 @@ const Home = ({ ref, destination }: Scroll) => {
     }
   };
   return (
-    <motion.header
+    <motion.section
       ref={ref}
       className={styles.home}
       initial={{ opacity: 0 }}
@@ -28,7 +28,7 @@ const Home = ({ ref, destination }: Scroll) => {
       <Button onClick={scroll}>
         <span>Saber mais</span>
       </Button>
-    </motion.header>
+    </motion.section>
   );
 };
 
