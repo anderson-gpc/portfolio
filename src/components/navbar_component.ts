@@ -102,6 +102,44 @@ class NavBar extends HTMLElement {
           top: 1rem;
           right: 1rem;
         }
+
+        @media screen and (min-width: 800px) {
+          nav {
+            overflow: hidden;
+          }
+
+          .container__navegacao {
+            display: flex;
+            flex-direction: row;
+            right: 0;
+            height: auto;
+            width: 100%;
+            background-color: transparent;
+            justify-content: end;
+            align-items: end;
+          }
+
+          .container__navegacao ul li h2 {
+            font-size: 1.2rem;
+          }
+
+          .container__lista {
+            flex-direction: row;
+            gap: 2rem;
+            align-items: start;
+            padding: 0 1rem 0 0;
+          }
+
+          .container__lista li.ativo .sublinhado {
+            background-color: #A1C4F1;
+            opacity: 0.5;
+          }
+
+          .options {
+            display: none;
+          }
+
+        }
       </style>
 
       <nav>
