@@ -22,6 +22,7 @@ class NavBar extends HTMLElement {
           justify-content: space-between;
           padding: 0 1rem 1rem 0;
           background-color: #323647;
+          position: relative;
         }
 
         .logo {
@@ -36,54 +37,131 @@ class NavBar extends HTMLElement {
         .animate__animated {
           --animate-duration: 0.3s;
         }
+
+        .container__navegacao {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 100vw;
+          background-color: #1a1a1a;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          z-index: 100;
+        }
+
+        .container__lista {
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .container__lista li {
+          opacity: 0.5;
+          transition: opacity 0.3s ease;
+          position: relative;
+        }
+
+        .container__lista li.ativo {
+          opacity: 1;
+        }
+
+        .container__lista .sublinhado {
+          height: 0.4rem;
+          width: 100%;
+          background-color: transparent;
+          border-radius: 100%;
+          transition: background-color 0.3s ease;
+          margin-top: 0.4rem;
+        }
+
+        .container__lista li.ativo .sublinhado {
+          background-color: #323647;
+        }
+
+        .container__navegacao ul li {
+          margin: 1.5rem 0;
+          cursor: pointer;
+        }
+
+        .container__navegacao ul li h2 {
+          font-family: "Chiron Hei HK", sans-serif;
+          font-weight: normal;
+          color: white;
+          font-size: 2rem;
+          margin: 0;
+        }
+
+        .close-btn {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+        }
       </style>
 
       <nav>
         <img class="logo" src="./icons/logo.png" />
-        <img class="options animate__animated" src="./icons/menu.png" />
+        <img class="open-btn options animate__animated" src="./icons/menu.png" />
       </nav>
+
+      <section class="container__navegacao animate__animated" aria-label="Opções de navegação">
+        <img class="close-btn options animate__animated" src="./icons/close.png" />
+
+        <ul class="container__lista" aria-label="Lista de opção">
+          <li class="ativo" ><h2>Sobre</h2><div class="sublinhado"></div></li>
+          <li><h2>Projetos</h2><div class="sublinhado"></div></li>
+          <li><h2>Experiências</h2><div class="sublinhado"></div></li>
+          <li><h2>Conhecimentos</h2><div class="sublinhado"></div></li>
+        </ul>
+      </section>
     `;
   }
 
   setup() {
-    const option = this.shadowRoot!.querySelector(".options") as HTMLImageElement;
+    const openBtn = this.shadowRoot!.querySelector(".open-btn") as HTMLImageElement;
+    const closeBtn = this.shadowRoot!.querySelector(".close-btn") as HTMLImageElement;
+    const menu = this.shadowRoot!.querySelector(".container__navegacao") as HTMLElement;
+    const items = this.shadowRoot!.querySelectorAll(".container__lista li");
 
-    let toggled = false;
-    let isAnimating = false;
+    items.forEach((item) => {
+      item.addEventListener("click", () => {
+        items.forEach((el) => el.classList.remove("ativo"));
+        item.classList.add("ativo");
+      });
+    });
 
-    option.addEventListener("click", () => {
-      if (isAnimating) return;
+    // Abrir menu
+    openBtn.addEventListener("click", () => {
+      openBtn.classList.remove("animate__rotateIn");
+      openBtn.classList.add("animate__rotateOut");
 
-      isAnimating = true;
-
-
-      option.classList.remove("animate__rotateIn");
-      option.classList.add("animate__rotateOut");
-
-      option.addEventListener(
+      openBtn.addEventListener(
         "animationend",
         () => {
-    
-          if (toggled) {
-            option.setAttribute("src", "./icons/menu.png");
-          } else {
-            option.setAttribute("src", "./icons/close.png");
-          }
+          menu.style.display = "flex";
+          menu.classList.remove("animate__slideOutRight");
+          menu.classList.add("animate__slideInRight");
+        },
+        { once: true }
+      );
+    });
 
-    
-          option.classList.remove("animate__rotateOut");
-          option.classList.add("animate__rotateIn");
+    // Fechar menu
+    closeBtn.addEventListener("click", () => {
+      menu.classList.remove("animate__slideInRight");
+      menu.classList.add("animate__slideOutRight");
 
-    
-          option.addEventListener(
-            "animationend",
-            () => {
-              isAnimating = false;
-            },
-            { once: true }
-          );
-
-          toggled = !toggled;
+      menu.addEventListener(
+        "animationend",
+        () => {
+          menu.style.display = "none";
+          openBtn.classList.remove("animate__rotateOut");
+          openBtn.classList.add("animate__rotateIn");
         },
         { once: true }
       );
