@@ -57,7 +57,9 @@ class NavBar extends HTMLElement {
           align-items: end;
           list-style: none;
           padding: 0;
-          margin: 0;
+          margin: 0 1rem 0 0;
+          padding: 0 1rem 0 0;
+          width: 100%;
         }
 
         .container__lista li {
@@ -127,6 +129,7 @@ class NavBar extends HTMLElement {
             gap: 2rem;
             align-items: start;
             padding: 0 1rem 0 0;
+            width: auto;
           }
 
           .container__lista li.ativo .sublinhado {
