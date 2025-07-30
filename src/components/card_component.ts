@@ -17,33 +17,35 @@ class CardComponent extends HTMLElement {
         }
 
         .content {
-          position: relative;
+          display: flex;
+          flex-direction: column;
           max-width: 1140px;
           width: 100%;
-          text-align: center;
+          position: relative;
         }
 
         .image-box {
+          flex: 1;
           display: flex;
           justify-content: center;
+          align-items: center;
         }
 
         .image-box img {
+          width: 100%;
           max-width: 100%;
-          max-height: 500px;
+          height: auto;
           border-radius: 1rem;
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .description-box {
+          flex: 1;
           background-color: var(--card-color);
           border-radius: 10px;
           padding: 1.5rem;
           font-size: 0.95rem;
-          position: relative;
-          max-width: 700px;
-          margin: -3rem auto 0;
-          z-index: 2;
+          margin-top: 2rem;
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
         }
 
@@ -69,10 +71,32 @@ class CardComponent extends HTMLElement {
           margin-right: 1rem;
         }
 
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
+          .content {
+            flex-direction: row;
+            align-items: center;
+          }
+
+          .image-box {
+            flex: 6;
+            position: relative;
+            z-index: 1;
+          }
+
+          .image-box img {
+            width: 100%;
+            max-width: none;
+            object-fit: contain;
+            border-radius: 1rem;
+          }
+
           .description-box {
-            margin-top: 1rem;
-            padding: 1rem;
+            flex: 4;
+            position: relative;
+            left: -10%;
+            margin-top: 0;
+            z-index: 2;
+            max-width: 500px;
           }
         }
       </style>
