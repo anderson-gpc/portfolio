@@ -20,16 +20,29 @@ class GridIcons extends HTMLElement {
     }
     render() {
         this.innerHTML = `
-            <section aria-label="Sessão de ${this.titleGrid}" class="mb-3">
-                <div class="row row-cols-2 align-items-center text-center">
-                    <div class="col">
-                        <img src="${this.src}" alt="${this.label}" class="img-fluid grayscale-img" />
-                    </div>
-                    <div class="col">
-                        <p class="text-secondary m-0">${this.label}</p>
-                    </div>
-                </div>
-            </section>
+            <style>
+                .img__icon {
+                    filter: grayscale(100%);
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 8px;
+                }
+                .icon-wrapper {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 0.5rem;
+                    color: var(--text-secondary-color, #999);
+                }
+                .icon-label {
+                    margin: 0;
+                    font-size: 0.9rem;
+                }
+            </style>
+
+            <div class="icon-wrapper">
+                <img src="${this.src}" alt="${this.label}" class="img__icon" />
+                <p class="icon-label">${this.label}</p>
+            </div>
         `;
     }
 }
