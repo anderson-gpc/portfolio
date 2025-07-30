@@ -30,11 +30,21 @@ class HeaderComponet extends HTMLElement {
                 }
             </style>
 
-            <section id="container__header" class="w-100" aria-label="Informações">
-                <presentation-component class="col" titulo="Anderson"></presentation-component>
-                <section id="contatos" class="container py-1" aria-label="Links de Redes Sociais"></section>
-                <about-component></about-component>
+            <section id="container__header" class="vw-100 vh-100 d-flex align-items-center" aria-label="Informações">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-12 col-md-6 mb-5 mb-md-0 d-flex flex-column justify-content-center">
+                            <presentation-component titulo="Anderson"></presentation-component>
+                            <section id="contatos" class="pt-3" aria-label="Links de Redes Sociais"></section>
+                        </div>
+
+                        <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+                            <about-component></about-component>
+                        </div>
+                    </div>
+                </div>
             </section>
+
         `;
     }
 }
