@@ -12,9 +12,10 @@ class CardComponent extends HTMLElement {
         .card-wrapper {
           background-color: var(--body-color);
           color: #ffffff;
-          padding: 4rem 1rem;
+          padding: 1rem 0 1rem 0;
           display: flex;
           justify-content: center;
+          margin-bottom: 1rem;
         }
 
         .content {
@@ -45,7 +46,7 @@ class CardComponent extends HTMLElement {
           border-radius: 10px;
           padding: 1.5rem;
           font-size: 0.95rem;
-          margin-top: 2rem;
+          margin-top: 0.5rem;
           box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
         }
 
