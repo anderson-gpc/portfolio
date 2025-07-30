@@ -159,8 +159,8 @@ class NavBar extends HTMLElement {
           <ul class="container__lista" aria-label="Lista de opção">
             <li class="ativo"><a href="#informacoes">Sobre</a><div class="sublinhado"></div></li>
             <li><a href="#projetos">Projetos</a><div class="sublinhado"></div></li>
-            <li><a>Experiências</a><div class="sublinhado"></div></li>
-            <li><a>Conhecimentos</a><div class="sublinhado"></div></li>
+            <li><a href="#experiencias">Experiências</a><div class="sublinhado"></div></li>
+            <li><a href="#conhecimentos">Conhecimentos</a><div class="sublinhado"></div></li>
           </ul>
         </section>
       </nav>
