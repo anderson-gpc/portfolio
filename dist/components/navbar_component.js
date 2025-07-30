@@ -104,7 +104,7 @@ class NavBar extends HTMLElement {
           right: 1rem;
         }
 
-        @media screen and (min-width: 800px) {
+        @media screen and (min-width: 768px) {
           nav {
             overflow: hidden;
           }
