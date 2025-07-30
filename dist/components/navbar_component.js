@@ -110,6 +110,7 @@ class NavBar extends HTMLElement {
           }
 
           .container__navegacao {
+            position: static;
             display: flex;
             flex-direction: row;
             right: 0;
@@ -147,18 +148,19 @@ class NavBar extends HTMLElement {
       <nav>
         <img class="logo" src="./icons/logo.png" />
         <img class="open-btn options animate__animated" src="./icons/menu.png" />
+
+        <section class="container__navegacao animate__animated" aria-label="Opções de navegação">
+          <img class="close-btn options animate__animated" src="./icons/close.png" />
+  
+          <ul class="container__lista" aria-label="Lista de opção">
+            <li class="ativo" ><h2>Sobre</h2><div class="sublinhado"></div></li>
+            <li><h2>Projetos</h2><div class="sublinhado"></div></li>
+            <li><h2>Experiências</h2><div class="sublinhado"></div></li>
+            <li><h2>Conhecimentos</h2><div class="sublinhado"></div></li>
+          </ul>
+        </section>
       </nav>
 
-      <section class="container__navegacao animate__animated" aria-label="Opções de navegação">
-        <img class="close-btn options animate__animated" src="./icons/close.png" />
-
-        <ul class="container__lista" aria-label="Lista de opção">
-          <li class="ativo" ><h2>Sobre</h2><div class="sublinhado"></div></li>
-          <li><h2>Projetos</h2><div class="sublinhado"></div></li>
-          <li><h2>Experiências</h2><div class="sublinhado"></div></li>
-          <li><h2>Conhecimentos</h2><div class="sublinhado"></div></li>
-        </ul>
-      </section>
     `;
     }
     setup() {
