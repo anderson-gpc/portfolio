@@ -14,7 +14,6 @@ class CardExperience extends HTMLElement {
                 section.card-experience {
                     padding: 1.5rem;
                     border-radius: 12px;
-                    box-shadow: 0 0 10px rgba(0,0,0,0.3);
                     display: flex;
                     flex-direction: column;
                     gap: 1rem;
