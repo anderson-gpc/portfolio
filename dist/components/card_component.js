@@ -6,6 +6,7 @@ class CardComponent extends HTMLElement {
         const platform = this.getAttribute('platform') || '';
         const description = this.getAttribute('description') || '';
         const tech = this.getAttribute('technologies') || '';
+        const isReversed = this.hasAttribute('reverse');
         this.innerHTML = `
       <style>
         .card-wrapper {
@@ -25,7 +26,7 @@ class CardComponent extends HTMLElement {
         }
 
         .image-box {
-          flex: 1;
+          flex: 6;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -33,14 +34,13 @@ class CardComponent extends HTMLElement {
 
         .image-box img {
           width: 100%;
-          max-width: 100%;
-          height: auto;
+          object-fit: contain;
           border-radius: 1rem;
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         .description-box {
-          flex: 1;
+          flex: 4;
           background-color: var(--card-color);
           border-radius: 10px;
           padding: 1.5rem;
@@ -71,38 +71,33 @@ class CardComponent extends HTMLElement {
           margin-right: 1rem;
         }
 
+        /* Layout horizontal em telas médias+ */
         @media (min-width: 768px) {
           .content {
             flex-direction: row;
             align-items: center;
           }
 
-          .image-box {
-            flex: 6;
-            position: relative;
-            z-index: 1;
-          }
-
-          .image-box img {
-            width: 100%;
-            max-width: none;
-            object-fit: contain;
-            border-radius: 1rem;
+          .content.reverse {
+            flex-direction: row-reverse;
           }
 
           .description-box {
-            flex: 4;
+            margin-top: 0;
             position: relative;
             left: -10%;
-            margin-top: 0;
-            z-index: 2;
             max-width: 500px;
+            z-index: 2;
+          }
+
+          .content.reverse .description-box {
+            left: 10%;
           }
         }
       </style>
 
       <div class="card-wrapper">
-        <div class="content">
+        <div class="content ${isReversed ? 'reverse' : ''}">
           <div class="image-box">
             <img src="${image}" alt="App preview" />
           </div>
