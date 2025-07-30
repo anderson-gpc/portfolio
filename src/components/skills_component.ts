@@ -1,8 +1,4 @@
 class SkillsComponent extends HTMLElement {
-    constructor() {
-        super();
-    }
-
     connectedCallback() {
         this.render();
         this.skills();
@@ -36,10 +32,9 @@ class SkillsComponent extends HTMLElement {
     private render() {
         this.innerHTML = `
             <section id="skills">
-
             <section>
         `;
     }
 }
 
-customElements.define("skills-components", SkillsComponent);
+customElements.define("skills-component", SkillsComponent);
