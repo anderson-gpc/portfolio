@@ -7,11 +7,7 @@ class PresentationComponent extends HTMLElement {
         const title = this.getAttribute('titulo') || '';
 
         this.innerHTML = `
-            <style>
-                .container__cumprimentacao {
-                    padding: 1rem;
-                }
-                
+            <style>                
                 .sublinhado {
                     width: 20%;
                     height: 1rem;
@@ -19,10 +15,6 @@ class PresentationComponent extends HTMLElement {
                 }
 
                 @media screen and (min-width: 768px) {
-                    .container__cumprimentacao {
-                        margin-top: 3rem;
-                    }
-
                     .sublinhado {
                         width: 5%;
                     }
@@ -33,7 +25,7 @@ class PresentationComponent extends HTMLElement {
                 href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
                 rel="stylesheet"
             />
-            <section class="container__cumprimentacao" aria-label="Cumprimentação">
+            <section class="container py-3" aria-label="Cumprimentação">
 
                 <h2 class="display-1 d-block d-md-none">Olá!</h2>
                 <h2 class="display-4 d-none d-md-block">Olá!</h2>
