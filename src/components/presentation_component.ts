@@ -17,6 +17,16 @@ class PresentationComponent extends HTMLElement {
                     height: 1rem;
                     background-color: var(--highlighted-yellow);
                 }
+
+                @media screen and (min-width: 768px) {
+                    .container__cumprimentacao {
+                        margin-top: 3rem;
+                    }
+
+                    .sublinhado {
+                        width: 5%;
+                    }
+                }
             </style>
 
             <link
@@ -24,10 +34,18 @@ class PresentationComponent extends HTMLElement {
                 rel="stylesheet"
             />
             <section class="container__cumprimentacao" aria-label="Cumprimentação">
-                <h2 class="display-1">Olá!</h2>
-                <h2 class="display-1">Eu sou
+
+                <h2 class="display-1 d-block d-md-none">Olá!</h2>
+                <h2 class="display-4 d-none d-md-block">Olá!</h2>
+
+                <h2 class="display-1 d-block d-md-none">Eu sou
                     <strong>${title}.</strong>
                 </h2>
+
+                <h2 class="display-4 d-none d-md-block">Eu sou
+                    <strong>${title}.</strong>
+                </h2>
+
                 <div class="sublinhado"></div>
             </section>
         `;
