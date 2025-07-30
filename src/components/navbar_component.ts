@@ -25,6 +25,10 @@ class NavBar extends HTMLElement {
           position: relative;
         }
 
+        a {
+          text-decoration: none;
+        }
+
         .logo {
           width: 6rem;
         }
@@ -91,7 +95,7 @@ class NavBar extends HTMLElement {
           cursor: pointer;
         }
 
-        .container__navegacao ul li h2 {
+        .container__navegacao ul li a {
           font-family: "Chiron Hei HK", sans-serif;
           font-weight: normal;
           color: white;
@@ -122,7 +126,7 @@ class NavBar extends HTMLElement {
             align-items: end;
           }
 
-          .container__navegacao ul li h2 {
+          .container__navegacao ul li a {
             font-size: 1.2rem;
           }
 
@@ -154,10 +158,10 @@ class NavBar extends HTMLElement {
           <img class="close-btn options animate__animated" src="./icons/close.png" />
   
           <ul class="container__lista" aria-label="Lista de opção">
-            <li class="ativo" ><h2>Sobre</h2><div class="sublinhado"></div></li>
-            <li><h2>Projetos</h2><div class="sublinhado"></div></li>
-            <li><h2>Experiências</h2><div class="sublinhado"></div></li>
-            <li><h2>Conhecimentos</h2><div class="sublinhado"></div></li>
+            <li class="ativo"><a href="#informacoes">Sobre</a><div class="sublinhado"></div></li>
+            <li><a href="#projetos">Projetos</a><div class="sublinhado"></div></li>
+            <li><a>Experiências</a><div class="sublinhado"></div></li>
+            <li><a>Conhecimentos</a><div class="sublinhado"></div></li>
           </ul>
         </section>
       </nav>
