@@ -26,14 +26,14 @@ class PresentationComponent extends HTMLElement {
             />
             <section class="container py-3" aria-label="Cumprimentação">
 
-                <h2 class="display-1 d-block d-md-none">Olá!</h2>
-                <h2 class="display-4 d-none d-md-block">Olá!</h2>
+                <h2 class="display-1 d-block d-md-none text-white">Olá!</h2>
+                <h2 class="display-4 d-none d-md-block text-white">Olá!</h2>
 
-                <h2 class="display-1 d-block d-md-none">Eu sou
+                <h2 class="display-1 d-block d-md-none text-white">Eu sou
                     <strong>${title}.</strong>
                 </h2>
 
-                <h2 class="display-4 d-none d-md-block">Eu sou
+                <h2 class="display-4 d-none d-md-block text-white">Eu sou
                     <strong>${title}.</strong>
                 </h2>
 
