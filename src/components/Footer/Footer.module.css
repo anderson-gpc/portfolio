@@ -1,9 +1,0 @@
-.footer {
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  background-image: linear-gradient(120deg, #025ce3 0%, #02c1e3 100%);
-  padding: 2rem;
-}
