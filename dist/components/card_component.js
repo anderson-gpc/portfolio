@@ -6,13 +6,17 @@ class CardComponent extends HTMLElement {
         const platform = this.getAttribute('platform') || '';
         const description = this.getAttribute('description') || '';
         const tech = this.getAttribute('technologies') || '';
+        const linkVideo = this.getAttribute('linkVideo');
+        const deploy = this.getAttribute('deploy');
         const isReversed = this.hasAttribute('reverse');
+        const hasVideo = !!linkVideo;
+        const hasDeploy = !!deploy;
         this.innerHTML = `
       <style>
         .card-wrapper {
           background-color: var(--body-color);
           color: #ffffff;
-          padding: 1rem 0 1rem 0;
+          padding: 1rem 0;
           display: flex;
           justify-content: center;
           margin-bottom: 1rem;
@@ -72,7 +76,59 @@ class CardComponent extends HTMLElement {
           margin-right: 1rem;
         }
 
-        /* Layout horizontal em telas médias+ */
+        .buttons {
+          margin-top: 1rem;
+          display: flex;
+          gap: 0.5rem;
+        }
+
+        .buttons button {
+          background-color: var(--highlighted-green);
+          color: black;
+          font-weight: bold;
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        .video-modal {
+          position: fixed;
+          top: 0; left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.8);
+          display: none;
+          justify-content: center;
+          align-items: center;
+          z-index: 9999;
+        }
+
+        .video-modal.active {
+          display: flex;
+        }
+
+        .video-modal iframe {
+          width: 80vw;
+          height: 45vw;
+          max-width: 960px;
+          max-height: 540px;
+          border: none;
+          border-radius: 10px;
+          box-shadow: 0 0 20px black;
+        }
+
+        .video-modal .close-btn {
+          position: absolute;
+          top: 2rem;
+          right: 2rem;
+          font-size: 2rem;
+          color: white;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+
         @media (min-width: 768px) {
           .content {
             flex-direction: row;
@@ -109,10 +165,54 @@ class CardComponent extends HTMLElement {
             <div class="tech-list">
               ${tech.split(',').map(t => `<span>${t.trim()}</span>`).join('')}
             </div>
+            <div class="buttons">
+              ${hasVideo ? `<button class="btn-video">Ver projeto em vídeo</button>` : ''}
+              ${hasDeploy ? `<a href="${deploy}" target="_blank"><button class="btn-deploy">Visualizar Projeto</button></a>` : ''}
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="video-modal" id="video-modal">
+        <button class="close-btn" id="close-video">&times;</button>
+        <iframe id="video-frame" allowfullscreen></iframe>
+      </div>
     `;
+        const modal = this.querySelector('#video-modal');
+        const iframe = this.querySelector('#video-frame');
+        const btnVideo = this.querySelector('.btn-video');
+        const btnClose = this.querySelector('#close-video');
+        if (btnVideo && modal && iframe && linkVideo) {
+            btnVideo.addEventListener('click', () => {
+                iframe.src = this.convertToEmbed(linkVideo);
+                modal.classList.add('active');
+            });
+        }
+        if (btnClose && modal && iframe) {
+            btnClose.addEventListener('click', () => {
+                modal.classList.remove('active');
+                iframe.src = '';
+            });
+        }
+    }
+    convertToEmbed(link) {
+        try {
+            const url = new URL(link);
+            const isYoutube = url.hostname.includes('youtube.com');
+            const isShort = url.hostname === 'youtu.be';
+            if (isYoutube && url.searchParams.has('v')) {
+                const videoId = url.searchParams.get('v');
+                return `https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1`;
+            }
+            if (isShort) {
+                const videoId = url.pathname.replace('/', '');
+                return `https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1`;
+            }
+            return link;
+        }
+        catch (_a) {
+            return link;
+        }
     }
 }
 customElements.define('card-component', CardComponent);
