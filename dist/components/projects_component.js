@@ -21,7 +21,7 @@ class ProjectsComponent extends HTMLElement {
                 "technologies": "TypeScript,SCSS",
                 "platform": "Web",
                 "linkVideo": "",
-                "deploy": "",
+                "deploy": "https://andersonstack.github.io/advice-generator-app/",
             },
         ];
         projetcts.forEach((project, index) => {
@@ -34,6 +34,7 @@ class ProjectsComponent extends HTMLElement {
             projectEl.setAttribute("description", project.description);
             projectEl.setAttribute("technologies", project.technologies);
             projectEl.setAttribute("linkVideo", project.linkVideo);
+            projectEl.setAttribute("deploy", project.deploy);
             containerProjects === null || containerProjects === void 0 ? void 0 : containerProjects.appendChild(projectEl);
         });
     }

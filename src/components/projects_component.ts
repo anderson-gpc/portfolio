@@ -23,7 +23,7 @@ class ProjectsComponent extends HTMLElement {
                 "technologies": "TypeScript,SCSS",
                 "platform": "Web",
                 "linkVideo": "",
-                "deploy": "",
+                "deploy": "https://andersonstack.github.io/advice-generator-app/",
             },
 
         ]
@@ -36,6 +36,7 @@ class ProjectsComponent extends HTMLElement {
             projectEl.setAttribute("description", project.description);
             projectEl.setAttribute("technologies", project.technologies);
             projectEl.setAttribute("linkVideo", project.linkVideo);
+            projectEl.setAttribute("deploy", project.deploy);
             containerProjects?.appendChild(projectEl);
         })
     }
