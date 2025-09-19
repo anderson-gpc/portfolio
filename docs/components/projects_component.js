@@ -20,7 +20,7 @@ class ProjectsComponent extends HTMLElement {
                 title: "Biblioteca",
                 src: "./images/biblioteca.png",
                 description: "Desenvolvi uma aplicação web fullstack com backend e banco de dados que funciona como uma biblioteca digital. Usuários comuns podem visualizar os livros disponíveis, acompanhar seus empréstimos ativos e vencidos, e gerenciar esses empréstimos. O usuário administrador tem a função de gerenciar o acervo, incluindo adicionar e atualizar livros, além de realizar empréstimos e devoluções junto aos usuários, mantendo a base de dados atualizada. Um dos maiores desafios do projeto foi construir toda a aplicação usando web components, eliminando dependências de frameworks externos e garantindo um código modular e leve. O frontend foi pensado para minimizar requisições ao backend, realizando apenas uma chamada no login para carregar todos os dados necessários, que são armazenados em cache, otimizando assim a performance e a experiência do usuário.",
-                technologies: "Node,TypeScript",
+                technologies: "Node,TypeScript,MySQL",
                 platform: "Web",
                 linkVideo: "https://www.youtube.com/watch?v=_z2LQ9llPt4",
                 deploy: "https://biblioteca-neon.vercel.app/",

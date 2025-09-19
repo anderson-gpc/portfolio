@@ -7,10 +7,10 @@ class ContatosComponent extends HTMLElement {
 
     private render() {
         const icones = [
-            {"src": "./icons/github.png", "href": "https://github.com/andersonstack"},
+            {"src": "./icons/github.png", "href": "https://github.com/anderson-gpc"},
             {"src": "./icons/gmail.png", "href": "mailto:andersong.pereiracruz@gmail.com"},
-            {"src": "./icons/instagram.png", "href": "https://www.instagram.com/andersongabriel_pc/"},
-            {"src": "./icons/linkedin.png", "href": "https://www.linkedin.com/in/anderson-gabriel-pc"}
+            {"src": "./icons/instagram.png", "href": "https://www.instagram.com/anderson_gpc/"},
+            {"src": "./icons/linkedin.png", "href": "https://www.linkedin.com/in/anderson-gpc"}
         ];
 
         this.innerHTML = '';
