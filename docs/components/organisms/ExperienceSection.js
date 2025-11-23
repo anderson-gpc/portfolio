@@ -1,16 +1,23 @@
-import "./card_experience.js";
-
-class ExperienceComponent extends HTMLElement {
+import '../molecules/CardExperience.js';
+class ExperienceSection extends HTMLElement {
     constructor() {
         super();
     }
-
     connectedCallback() {
         this.render();
+        this.loadStyles();
         this.experiences();
     }
-
-    private experiences() {
+    loadStyles() {
+        if (!document.getElementById('experience-section-styles')) {
+            const link = document.createElement('link');
+            link.id = 'experience-section-styles';
+            link.rel = 'stylesheet';
+            link.href = './styles/organisms/ExperienceSection.css';
+            document.head.appendChild(link);
+        }
+    }
+    experiences() {
         const containerExperiences = this.querySelector("#container__experiences__cards");
         const myExperiences = [
             {
@@ -28,7 +35,6 @@ class ExperienceComponent extends HTMLElement {
                 date: "2024 – 2025",
             }
         ];
-
         myExperiences.forEach(experience => {
             const cardExperience = document.createElement("card-experience");
             cardExperience.setAttribute("localName", experience.localName);
@@ -36,73 +42,18 @@ class ExperienceComponent extends HTMLElement {
             cardExperience.setAttribute("localCargo", experience.localCargo);
             cardExperience.setAttribute("localAcoes", experience.localAcoes);
             cardExperience.setAttribute("date", experience.date);
-            containerExperiences!.appendChild(cardExperience);
+            containerExperiences.appendChild(cardExperience);
         });
     }
-
-    private render() {
+    render() {
         this.innerHTML = `
-            <style>
-                #container__experiences {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 2rem;
-                    padding: 2rem 1rem;
-                    background-color: var(--header-color);
-                    color: white;
-                }
-
-                @media (min-width: 768px) {
-                    #container__experiences {
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: flex-start;
-                        padding: 4rem;
-                    }
-                }
-
-                .experience__title {
-                    max-width: 300px;
-                    text-align: center;
-                }
-
-                .experience__title p {
-                    color: var(--highlighted-blue);
-                    margin: 0;
-                    font-size: clamp(1rem, 1.5vw, 1.2rem);
-                }
-
-                .experience__title h2 {
-                    margin-top: 0.5rem;
-                    font-size: clamp(1.5rem, 2.5vw, 2rem);
-                    color: var(--highlighted-green);
-                }
-
-                #container__experiences__cards {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1.5rem;
-                    width: 100%;
-                    max-width: 600px;
-                }
-
-                @media (min-width: 768px) {
-                    .experience__title {
-                        text-align: right;
-                        padding-right: 2rem;
-                    }
-                }
-            </style>
-
-            <section id="container__experiences">
-                <div class="experience__title">
-                    <h2>Experiências</h2>
-                </div>
-                <div id="container__experiences__cards"></div>
-            </section>
-        `;
+      <section id="container__experiences" class="experience-section__container">
+        <div class="experience-section__title">
+          <h2>Experiências</h2>
+        </div>
+        <div id="container__experiences__cards" class="experience-section__cards"></div>
+      </section>
+    `;
     }
 }
-
-customElements.define("experience-component", ExperienceComponent);
+customElements.define("experience-component", ExperienceSection);

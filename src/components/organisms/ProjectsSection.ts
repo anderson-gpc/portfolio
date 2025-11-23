@@ -1,14 +1,25 @@
-import "./card_component.js";
+import './ProjectCard.js';
 
-class ProjectsComponent extends HTMLElement {
+class ProjectsSection extends HTMLElement {
   connectedCallback() {
     this.render();
     this.projects();
+    this.loadStyles();
+  }
+
+  private loadStyles(): void {
+    if (!document.getElementById('projects-section-styles')) {
+      const link = document.createElement('link');
+      link.id = 'projects-section-styles';
+      link.rel = 'stylesheet';
+      link.href = './styles/organisms/ProjectsSection.css';
+      document.head.appendChild(link);
+    }
   }
 
   private projects() {
     const containerProjects = document.querySelector("#container__projetos");
-    const projetcts = [
+    const projects = [
       {
         title: "Dashboard Github",
         src: "./images/dashboard.png",
@@ -41,8 +52,8 @@ class ProjectsComponent extends HTMLElement {
         deploy: "https://biblioteca-neon.vercel.app/",
       },
     ];
-    projetcts.forEach((project, index) => {
-      const projectEl = document.createElement("card-component");
+    projects.forEach((project, index) => {
+      const projectEl = document.createElement("project-card");
       if (index % 2 !== 0) projectEl.setAttribute("reverse", "");
       projectEl.setAttribute("image", project.src);
       projectEl.setAttribute("title", project.title);
@@ -57,15 +68,10 @@ class ProjectsComponent extends HTMLElement {
 
   private render() {
     this.innerHTML = `
-            <style>
-                #container__projetos {
-                    background-color: var(--body-color);
-                    padding: 1rem;
-                }
-            </style>
-            <section id="container__projetos" class="container-fluid" aria-label="Container de Projetos"></section>
-        `;
+      <section id="container__projetos" class="projects-section__container container-fluid" aria-label="Container de Projetos"></section>
+    `;
   }
 }
 
-customElements.define("projects-component", ProjectsComponent);
+customElements.define("projects-component", ProjectsSection);
+

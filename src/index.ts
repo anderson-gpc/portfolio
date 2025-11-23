@@ -1,6 +1,6 @@
-import "./components/navbar_component.js";
-import "./components/header_component.js";
-import "./components/projects_component.js";
-import "./components/experience_component.js";
-import "./components/skills_component.js";
-import "./components/footer_component.js";
+import "./components/organisms/Navbar.js";
+import "./components/organisms/Header.js";
+import "./components/organisms/ProjectsSection.js";
+import "./components/organisms/ExperienceSection.js";
+import "./components/organisms/SkillsSection.js";
+import "./components/organisms/Footer.js";
