@@ -9,7 +9,7 @@ class ContatosComponent extends HTMLElement {
         const icones = [
             {"src": "./icons/github.png", "href": "https://github.com/anderson-gpc"},
             {"src": "./icons/gmail.png", "href": "mailto:andersong.pereiracruz@gmail.com"},
-            {"src": "./icons/instagram.png", "href": "https://www.instagram.com/anderson_gpc/"},
+            // {"src": "./icons/instagram.png", "href": "https://www.instagram.com/anderson_gpc/"},
             {"src": "./icons/linkedin.png", "href": "https://www.linkedin.com/in/anderson-gpc"}
         ];
 

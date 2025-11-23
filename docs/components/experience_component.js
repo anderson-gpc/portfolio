@@ -14,14 +14,14 @@ class ExperienceComponent extends HTMLElement {
                 localName: "BaoBah",
                 localLink: "https://baobah.ceres.ufrn.br/",
                 localCargo: "Desenvolvedor Front‑End",
-                localAcoes: "Interfaces responsivas modernas,Criação e uso de web components,Aprimoramento de usabilidade com frameworks atuais",
+                localAcoes: "Desenvolvo o website Banco de Objetos de Aprendizagem em História (BaoBah), uma plataforma que organiza e disponibiliza materiais digitais voltados ao ensino de História. Sou responsável pela interface do sistema utilizando Vue.js com Vite, empregando TypeScript para a lógica da aplicação, HTML5 para a estruturação das páginas e CSS3 para a estilização. Crio componentes reutilizáveis, funções utilitárias e estruturas de UI que tornam o sistema estável, escalável e fácil de usar. Aplico práticas modernas de desenvolvimento web e contribuo para melhorar o desempenho, a organização visual e a experiência do usuário. Participo também do fluxo de trabalho da equipe utilizando Kanban, garantindo alinhamento, priorização e entregas contínuas ao longo do desenvolvimento da plataforma.",
                 date: "2025 – Presente"
             },
             {
                 localName: "ByteSJR",
                 localLink: "https://seridobyte.github.io/bytesjrpage/",
-                localCargo: "Desenvolvedor Front‑End",
-                localAcoes: "Desenvolvimento de layout responsivo,Implementação de seções interativas com JavaScript vanilla,Melhoria da performance,SEO e acessibilidade",
+                localCargo: "Desenvolvedor de Software",
+                localAcoes: "Atuei como desenvolvedor de software na empresa júnior Byte Seridó Jr., criando soluções tecnológicas para negócios locais e projetos acadêmicos. Contribuí no desenvolvimento de sistemas web focados em melhorar processos internos, ampliar a presença digital e automatizar tarefas, sempre priorizando usabilidade, confiabilidade e impacto para o cliente. No back-end, desenvolvi APIs e regras de negócio utilizando Python. No front-end, trabalhei com Vue.js e Vite para entregar interfaces rápidas e reativas, utilizando TypeScript, HTML5 e CSS3 como base para criar componentes reutilizáveis, layouts responsivos e funcionalidades interativas. Também apoiei o processo ágil das entregas, garantindo colaboração contínua e evolução dos projetos.",
                 date: "2024 – 2025",
             }
         ];
@@ -92,8 +92,7 @@ class ExperienceComponent extends HTMLElement {
 
             <section id="container__experiences">
                 <div class="experience__title">
-                    <p class="text-secondary">Experiências</p>
-                    <h2>Onde já trabalhei</h2>
+                    <h2>Experiências</h2>
                 </div>
                 <div id="container__experiences__cards"></div>
             </section>

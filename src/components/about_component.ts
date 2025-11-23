@@ -24,7 +24,7 @@ class AboutComponent extends HTMLElement {
                             <h2 class="display-5 fw-bold text-white">Desenvolvedor Full Stack</h2>
                         </div>
                         <p class="lead text-light">
-                            Possuo <strong>${anosExperiencia}</strong> ano${anosExperiencia > 1 ? 's' : ''} de experiência em desenvolvimento web, atuando tanto no backend quanto no frontend. Crio soluções modernas e responsivas utilizando Web Components, React, Next.js, Nest.js, Node.js e Express.
+                            Possuo <strong>${anosExperiencia}</strong> ano${anosExperiencia > 1 ? 's' : ''} de experiência em desenvolvimento web, atuando tanto no backend quanto no frontend. Crio soluções modernas e responsivas utilizando TypeScript, React, Next.js, Nest.js e Node.js.
                         </p>
                         <a href="#projetos" class="projetos fw-bold">
                             Ver meus trabalhos

@@ -65,10 +65,7 @@ class CardExperience extends HTMLElement {
                 <div class="experience-body">
                     <h2>${localCargo}</h2>
                     <div class="actions">
-                        ${localAcoes
-                            .split(",")
-                            .map(action => `<span>• ${action.trim()}</span>`)
-                            .join("")}
+                        ${localAcoes}
                     </div>
                 </div>
             </section>
