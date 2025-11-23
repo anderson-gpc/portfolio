@@ -23,7 +23,7 @@ class ProjectsSection extends HTMLElement {
                 description: "Desenvolvi um website para gerenciamento da conta do usuário no GitHub, permitindo verificar seguidores mútuos, não seguidores e issues abertas. Fui responsável pelo projeto completo, implementando o back-end com NextJS, autenticação via NextAuth/OAuth com GitHub, integração com PostgreSQL usando Prisma ORM, e ações de servidor para criar e deletar tokens de acesso e cadastrar usuários no banco de dados. Também conectei a aplicação ao Octokit para autenticação direta com GitHub. No front-end, usei React com ANTD, criando componentes reutilizáveis e seguindo o Design Atômico, garantindo código organizado e escalável. O resultado foi uma aplicação funcional e intuitiva para gerenciar conexões e issues no GitHub de forma segura.",
                 technologies: "TypeScript,NextJS,React",
                 platform: "Web",
-                linkVideo: "",
+                linkVideo: "https://youtu.be/5xWeEqobQ3I",
                 deploy: "https://dashboard-github-bfyy.vercel.app/dashboard",
             },
             {
