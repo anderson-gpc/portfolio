@@ -24,7 +24,7 @@ class ProjectsSection extends HTMLElement {
                 technologies: "TypeScript,NextJS,React",
                 platform: "Web",
                 linkVideo: "https://youtu.be/5xWeEqobQ3I",
-                deploy: "https://dashboard-github-bfyy.vercel.app/dashboard",
+                deploy: "https://dashboard-github-three.vercel.app/dashboard",
             },
             {
                 title: "SigPonto",
